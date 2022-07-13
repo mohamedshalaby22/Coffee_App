@@ -1,4 +1,4 @@
-import 'package:coffee_app/controller/bottom_nav.dart';
+import 'package:coffee_app/Screens/bottom_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

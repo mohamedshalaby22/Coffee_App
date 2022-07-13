@@ -1,8 +1,7 @@
+import 'package:coffee_app/Screens/home_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'constant/constants.dart';
-import 'screens/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,13 +9,12 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            scaffoldBackgroundColor: backGroundColor,
+            scaffoldBackgroundColor: const Color(0xffa7a37e),
             appBarTheme: const AppBarTheme(
                 elevation: 0.0,
                 backgroundColor: Colors.transparent,
@@ -24,6 +22,6 @@ class MyApp extends StatelessWidget {
                   statusBarColor: Colors.transparent,
                   statusBarIconBrightness: Brightness.light,
                 ))),
-        home: const SplashScreen());
+        home: const HomeLayout());
   }
 }
