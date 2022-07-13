@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:coffee_app/constant/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +42,10 @@ class ItemsList extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Image.network(image, fit: BoxFit.cover),
+                    child: CachedNetworkImage(
+                      imageUrl: image,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   Positioned(
                     right: 0,

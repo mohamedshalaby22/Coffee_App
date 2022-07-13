@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../constant/constants.dart';
 
@@ -25,8 +26,9 @@ class OffersWidget extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Image.network(
-                'https://th.bing.com/th/id/R.0ed2b899873c0419d8e9ae7b4b1d880f?rik=HLcRxuOtWaZnjQ&riu=http%3a%2f%2fpaintingrachelred.weebly.com%2fuploads%2f2%2f3%2f8%2f6%2f23867843%2f4309545_orig.jpg&ehk=IFkRhQd3lBAjMdohs95GZulZcZRQuaG3pT3ib0r%2bMpM%3d&risl=&pid=ImgRaw&r=0',
+            child: CachedNetworkImage(
+                imageUrl:
+                    'https://th.bing.com/th/id/R.0ed2b899873c0419d8e9ae7b4b1d880f?rik=HLcRxuOtWaZnjQ&riu=http%3a%2f%2fpaintingrachelred.weebly.com%2fuploads%2f2%2f3%2f8%2f6%2f23867843%2f4309545_orig.jpg&ehk=IFkRhQd3lBAjMdohs95GZulZcZRQuaG3pT3ib0r%2bMpM%3d&risl=&pid=ImgRaw&r=0',
                 fit: BoxFit.fill),
           ),
           const SizedBox(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'constant/constants.dart';
-import 'widgets/login_page.dart';
+import 'screens/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -25,6 +24,6 @@ class MyApp extends StatelessWidget {
                   statusBarColor: Colors.transparent,
                   statusBarIconBrightness: Brightness.light,
                 ))),
-        home: LoginPage());
+        home: const SplashScreen());
   }
 }

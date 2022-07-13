@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:coffee_app/models/data_model.dart';
 import 'package:coffee_app/components/text.dart';
 import 'package:flutter/material.dart';
@@ -35,8 +36,8 @@ class _CartPageState extends State<Detail> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Image.network(
-                      widget.detail!.image,
+                    child: CachedNetworkImage(
+                      imageUrl: widget.detail!.image,
                       fit: BoxFit.fill,
                     ),
                   ),

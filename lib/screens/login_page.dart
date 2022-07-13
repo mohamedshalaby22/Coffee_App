@@ -4,7 +4,6 @@ import 'package:coffee_app/constant/constants.dart';
 import 'package:coffee_app/controller/bottom_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../components/text_form_field.dart';
 
 // ignore: must_be_immutable
@@ -24,6 +23,7 @@ class LoginPage extends StatelessWidget {
         body: Form(
           key: formKey,
           child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
             child: SafeArea(
               child: Padding(
                 padding: const EdgeInsets.all(16),
@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    TextWidget(text: 'Login'.toUpperCase()),
+                    TextWidget(text: 'Login'),
                     const SizedBox(
                       height: 20,
                     ),
